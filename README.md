@@ -12,6 +12,7 @@ installs it when an add-on that needs it is installed.
 | `addonkit.records` | Notes kept in the document itself (how each part is made, its spec, materials per body, calibrations): saved with the `.FCStd`, and undo takes them back with the change they belong to. |
 | `addonkit.geo` | Shape building and reading on FreeCAD's Part module: rounded prisms, ruled lofts, the thinnest wall, thin runs. |
 | `addonkit.fits` | Fits (press, slide, free) and hardware holes for made parts, from the ISO sizes. |
+| `addonkit.ccx` | CalculiX's input decks and results, plain Python: meshes, loads, buckling, modes, heat, read back. |
 | `addonkit.materials` | Printing filaments (density, stiffness, strength, softening): one table every add-on reads. |
 | `addonkit.data` | Versioned, schema-checked data files with your own overrides (below). |
 | `addonkit.Refused` | A refusal that says what to do instead. |
