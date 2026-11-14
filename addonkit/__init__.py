@@ -7,6 +7,9 @@
 - fits: fits and hardware holes for made parts
 - ccx: CalculiX input decks and results (plain Python)
 - archive: zips to hand on, with nothing of the computer in them
+- sheets: drawing sheets (paper, layout, title block) as SVG, DXF and PDF
+- iso286: ISO 286 limits of size for the common fits
+- techdraw: TechDraw helpers (waiting for a view's lines with no window)
 - materials: printing filaments, one table
 - data: versioned, schema-checked data files with the person's overrides
 - Refused: a refusal that says what to do instead
@@ -16,7 +19,7 @@ Plain Python on FreeCAD; no add-on here imports any other add-on.
 Depend on it with a version range: addonkit.require(">=1.0,<2").
 """
 
-VERSION = "1.4.0"
+VERSION = "1.5.0"
 
 
 class Refused(ValueError):

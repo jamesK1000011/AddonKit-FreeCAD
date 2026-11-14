@@ -14,6 +14,9 @@ installs it when an add-on that needs it is installed.
 | `addonkit.fits` | Fits (press, slide, free) and hardware holes for made parts, from the ISO sizes. |
 | `addonkit.ccx` | CalculiX's input decks and results, plain Python: meshes, loads, buckling, modes, heat, read back. |
 | `addonkit.archive` | Zips to hand on (order packages, library packs): deflated, nothing of the computer in them. |
+| `addonkit.sheets` | Drawing sheets as plain Python: paper sizes, view layout, title blocks, written as SVG, DXF and PDF. |
+| `addonkit.iso286` | ISO 286 limits of size for the common fits (IT5–IT11; F G H JS holes, f g h js k n p shafts; up to 500 mm). |
+| `addonkit.techdraw` | TechDraw helpers: a view's lines waited for when there is no window to run Qt's loop. |
 | `addonkit.materials` | Printing filaments (density, stiffness, strength, softening): one table every add-on reads. |
 | `addonkit.data` | Versioned, schema-checked data files with your own overrides (below). |
 | `addonkit.Refused` | A refusal that says what to do instead. |

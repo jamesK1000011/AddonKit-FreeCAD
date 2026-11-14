@@ -14,11 +14,16 @@ addonkit/data/metric-hardware.json
 addonkit/data/metric-hardware.schema.json
 addonkit/fits.py
 addonkit/geo.py
+addonkit/iso286.py
 addonkit/materials.py
 addonkit/records.py
+addonkit/sheets.py
+addonkit/techdraw.py
 addonkit/ui/__init__.py
 addonkit/ui/form.py
 package.xml
 tests/test_addonkit.py
 tests/test_archive.py
 tests/test_ccx.py
+tests/test_iso286.py
+tests/test_sheets.py
