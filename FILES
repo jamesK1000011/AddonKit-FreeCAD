@@ -1,0 +1,13 @@
+Init.py
+LICENSE
+LICENSE-DATA
+README.md
+addonkit/__init__.py
+addonkit/data.py
+addonkit/fits.py
+addonkit/geo.py
+addonkit/records.py
+addonkit/ui/__init__.py
+addonkit/ui/form.py
+package.xml
+tests/test_addonkit.py

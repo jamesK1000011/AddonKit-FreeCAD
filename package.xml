@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<package format="1" xmlns="https://wiki.freecad.org/Package_Metadata">
+  <name>AddonKit</name>
+  <description>A library other FreeCAD add-ons build on: records kept in the document, shape helpers, fits, versioned data files with your own overrides, and shared dialog pieces. Installs nothing visible on its own.</description>
+  <version>1.0.0</version>
+  <date>2026-11-14</date>
+  <maintainer email="jamesK1000011@users.noreply.github.com">jamesK1000011</maintainer>
+  <license file="LICENSE">LGPL-2.1-or-later</license>
+  <url type="repository" branch="main">https://github.com/jamesK1000011/AddonKit-FreeCAD</url>
+  <url type="bugtracker">https://github.com/jamesK1000011/AddonKit-FreeCAD/issues</url>
+  <freecadmin>1.0.0</freecadmin>
+  <tag>library</tag>
+  <content>
+    <other>
+      <name>AddonKit</name>
+      <description>Shared library for FreeCAD add-ons</description>
+      <subdirectory>./</subdirectory>
+    </other>
+  </content>
+</package>
