@@ -109,6 +109,16 @@ class Data(unittest.TestCase):
         self.assertEqual(data.check_folder(folder), [])
 
 
+class Materials(unittest.TestCase):
+    def test_one_filament_table(self):
+        from addonkit import materials
+
+        self.assertEqual(materials.DENSITY, {"pla": 1.24, "petg": 1.27, "abs": 1.04, "asa": 1.07, "pa6-cf": 1.12, "tpu-95a": 1.21})
+        c = materials.card("PETG")
+        self.assertEqual((c["E"], c["softens"], c["category"]), (2100, 70, "Printing filament"))
+        self.assertIsNone(materials.card("unobtainium"))
+
+
 class Records(unittest.TestCase):
     def test_meta_only_document(self):
         from addonkit import records

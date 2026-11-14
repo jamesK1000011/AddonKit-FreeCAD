@@ -13,7 +13,7 @@ Plain Python on FreeCAD; no add-on here imports any other add-on.
 Depend on it with a version range: addonkit.require(">=1.0,<2").
 """
 
-VERSION = "1.1.0"
+VERSION = "1.2.0"
 
 
 class Refused(ValueError):

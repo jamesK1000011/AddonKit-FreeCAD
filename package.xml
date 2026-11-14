@@ -2,7 +2,7 @@
 <package format="1" xmlns="https://wiki.freecad.org/Package_Metadata">
   <name>AddonKit</name>
   <description>A library other FreeCAD add-ons build on: records kept in the document, shape helpers, fits, versioned data files with your own overrides, and shared dialog pieces. Installs nothing visible on its own.</description>
-  <version>1.1.0</version>
+  <version>1.2.0</version>
   <date>2026-11-14</date>
   <maintainer email="jamesK1000011@users.noreply.github.com">jamesK1000011</maintainer>
   <license file="LICENSE">LGPL-2.1-or-later</license>

@@ -4,12 +4,15 @@ LICENSE-DATA
 README.md
 addonkit/__init__.py
 addonkit/data.py
+addonkit/data/filaments.json
+addonkit/data/filaments.schema.json
 addonkit/data/fits.json
 addonkit/data/fits.schema.json
 addonkit/data/metric-hardware.json
 addonkit/data/metric-hardware.schema.json
 addonkit/fits.py
 addonkit/geo.py
+addonkit/materials.py
 addonkit/records.py
 addonkit/ui/__init__.py
 addonkit/ui/form.py
