@@ -3,6 +3,7 @@ LICENSE
 LICENSE-DATA
 README.md
 addonkit/__init__.py
+addonkit/archive.py
 addonkit/ccx.py
 addonkit/data.py
 addonkit/data/filaments.json
@@ -19,4 +20,5 @@ addonkit/ui/__init__.py
 addonkit/ui/form.py
 package.xml
 tests/test_addonkit.py
+tests/test_archive.py
 tests/test_ccx.py

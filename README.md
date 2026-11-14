@@ -13,6 +13,7 @@ installs it when an add-on that needs it is installed.
 | `addonkit.geo` | Shape building and reading on FreeCAD's Part module: rounded prisms, ruled lofts, the thinnest wall, thin runs. |
 | `addonkit.fits` | Fits (press, slide, free) and hardware holes for made parts, from the ISO sizes. |
 | `addonkit.ccx` | CalculiX's input decks and results, plain Python: meshes, loads, buckling, modes, heat, read back. |
+| `addonkit.archive` | Zips to hand on (order packages, library packs): deflated, nothing of the computer in them. |
 | `addonkit.materials` | Printing filaments (density, stiffness, strength, softening): one table every add-on reads. |
 | `addonkit.data` | Versioned, schema-checked data files with your own overrides (below). |
 | `addonkit.Refused` | A refusal that says what to do instead. |
