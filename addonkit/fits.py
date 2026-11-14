@@ -7,16 +7,21 @@
 # every size here, 0.2 and 0 when the printer is not calibrated.
 
 import math
+import os
 
 import FreeCAD
 import Part
 
+from . import data as _data
+
 V = FreeCAD.Vector
+_DATA = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
 
 # ---- fits ---------------------------------------------------------------------------------
 
 # Diametral gap between hole and peg as modelled, for a calibrated printer.
-FITS = {"press": 0.0, "snug": 0.1, "slide": 0.2, "free": 0.35}
+# (data/fits.json; the person's own values in ~/.config/addonkit/addonkit/fits.json)
+FITS = {k: v["gap"] for k, v in _data.load(_DATA, "fits", package="addonkit")["entries"].items()}
 DEFAULT_CAL = {"hole": 0.2, "shaft": 0.0}
 
 
@@ -44,16 +49,10 @@ def stack(items):
 
 # ---- hardware -----------------------------------------------------------------------------
 
-M = {
-    # size: clearance (close, normal, loose), socket head (d, k), countersunk head d, nut (AF, m), insert (hole d, depth)
-    "M2": {"clear": (2.2, 2.4, 2.6), "head": (3.8, 2.0), "csk": 3.8, "nut": (4.0, 1.6), "insert": (3.2, 4.0)},
-    "M2.5": {"clear": (2.7, 2.9, 3.1), "head": (4.5, 2.5), "csk": 4.7, "nut": (5.0, 2.0), "insert": (3.6, 4.0)},
-    "M3": {"clear": (3.2, 3.4, 3.6), "head": (5.5, 3.0), "csk": 6.72, "nut": (5.5, 2.4), "insert": (4.0, 5.7)},
-    "M4": {"clear": (4.3, 4.5, 4.8), "head": (7.0, 4.0), "csk": 8.96, "nut": (7.0, 3.2), "insert": (5.6, 8.1)},
-    "M5": {"clear": (5.3, 5.5, 5.8), "head": (8.5, 5.0), "csk": 11.2, "nut": (8.0, 4.7), "insert": (6.4, 9.5)},
-    "M6": {"clear": (6.4, 6.6, 7.0), "head": (10.0, 6.0), "csk": 13.44, "nut": (10.0, 5.2), "insert": (8.0, 12.7)},
-    "M8": {"clear": (8.4, 9.0, 10.0), "head": (13.0, 8.0), "csk": 17.92, "nut": (13.0, 6.8), "insert": (9.6, 12.7)},
-}
+# size: clearance (close, normal, loose), socket head (d, k), countersunk
+# head d, nut (AF, m), insert (hole d, depth) — data/metric-hardware.json
+M = {k: {f: (tuple(v[f]) if isinstance(v[f], list) else v[f]) for f in ("clear", "head", "csk", "nut", "insert")}
+     for k, v in _data.load(_DATA, "metric-hardware", package="addonkit")["entries"].items()}
 KINDS = ("clearance", "counterbore", "countersink", "nut_trap", "insert", "magnet")
 FIT_INDEX = {"close": 0, "normal": 1, "loose": 2}
 

@@ -122,6 +122,16 @@ class Records(unittest.TestCase):
 
 
 @unittest.skipUnless(HAVE_FC, "FreeCAD is not importable here")
+class Fits(unittest.TestCase):
+    def test_tables_from_data(self):
+        from addonkit import fits
+
+        self.assertEqual(fits.FITS, {"press": 0.0, "snug": 0.1, "slide": 0.2, "free": 0.35})
+        self.assertEqual(fits.M["M3"]["clear"], (3.2, 3.4, 3.6))
+        self.assertAlmostEqual(fits.size_fit("slide", 8.0, "hole", fits.DEFAULT_CAL), 8.4)
+
+
+@unittest.skipUnless(HAVE_FC, "FreeCAD is not importable here")
 class Shapes(unittest.TestCase):
     def test_round_rect_prism_volume(self):
         from addonkit import geo

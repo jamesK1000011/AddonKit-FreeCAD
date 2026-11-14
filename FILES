@@ -4,6 +4,10 @@ LICENSE-DATA
 README.md
 addonkit/__init__.py
 addonkit/data.py
+addonkit/data/fits.json
+addonkit/data/fits.schema.json
+addonkit/data/metric-hardware.json
+addonkit/data/metric-hardware.schema.json
 addonkit/fits.py
 addonkit/geo.py
 addonkit/records.py
