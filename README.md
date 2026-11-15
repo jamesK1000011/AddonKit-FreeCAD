@@ -1,3 +1,7 @@
+> **Retired (14 Nov 2026).** Every add-on now installs alone and carries its
+> own copy of what it used from here; nothing depends on AddonKit any more.
+> This repository is kept read-only for its history.
+
 <!-- SPDX-License-Identifier: LGPL-2.1-or-later -->
 # AddonKit for FreeCAD
 
